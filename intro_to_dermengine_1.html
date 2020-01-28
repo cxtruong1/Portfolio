@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Calvin Truong</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="content_main">
+
+
+	<nav>
+		<ul>
+			<!-- The Home Page navigation button is the logo (my name) and it contains the "about me" content-->
+			<li><a class = "nav_item" href="index.html"><span class = "small_type">00</span><span id="demo1">Home</span></a></li>
+			<li><a class = "nav_item" href="work.html"><span class = "small_type">01</span><span id="demo2" class="active_nav_color">Work</span></a></li>
+			<li><a class = "nav_item" href="about.html"><span class = "small_type">02</span><span id="demo3">About</span></a></li>
+
+
+		</ul>
+	</nav>
+
+
+	<main>
+
+		<div class="row">
+			<div class = "column_1of1">
+				<h1>Intro to DermEngine: Account Basics | Training Guide</h1>
+
+			    <iframe width="720rem" height="405rem" class ="project_video" src="https://www.youtube.com/embed/Ql7O7o9ocsA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	
+	<div class="row">
+		
+		<div class = "column_1of2">
+			<h2>Summary</h2>
+			
+	        <p>For this training guide my role was in filming, producing and editing. The script was created collaboratively with myself, the content team and the clinical team through multiple iterations. The purpose of the video is to introduce and train doctors on the DermEngine cross-platform system.</p>
+
+		</div>
+		
+	</div>
+
+
+
+
+
+	
+	</main>
+
+</div>
+
+<footer>
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/modal.js"></script>
+  <script>
+    AOS.init({ duration: 800});
+    
+  </script>
+<script>
+
+var speed = 100;
+var x = 1;
+
+
+function repeatWrite(){
+	var i = 0;
+	var txt = document.getElementById("demo" + x).innerHTML;
+	var txt_null = null;
+	document.getElementById("demo" + x).innerHTML = txt_null;
+
+	function typeWriter() {
+	  if (i < txt.length) 
+	  {
+	    document.getElementById("demo" + x).innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	  else{
+	  	if(x<3){
+		  	x=x+1;
+		  	repeatWrite();
+		  }
+	  }
+	}	
+	typeWriter();
+}
+
+</script>
+</body>
+</html>

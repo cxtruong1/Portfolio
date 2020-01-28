@@ -1,0 +1,1 @@
+"use strict";var speed=100,x=1;function repeatWrite(){var e=0,t=document.getElementById("demo"+x).innerHTML;document.getElementById("demo"+x).innerHTML=null,function n(){e<t.length?(document.getElementById("demo"+x).innerHTML+=t.charAt(e),e++,setTimeout(n,speed)):x<1&&(x+=1,repeatWrite())}()}
